@@ -1,6 +1,6 @@
 ﻿namespace DSD601CalculatorASP.Operations
 {
-    public enum OperationType
+    public enum EnumOperationType
     {
         Addition,
         Multiplication,

@@ -23,10 +23,9 @@
         <div class="row">  
             <label asp-for="OperationType" class="col-lg-2"></label>  
             <select asp-for="OperationType" class="col-lg-2" asp-items="Html.GetEnumSelectList<OperationType>()">  
-                <option selected="selected" value="">Select</option>  
+               
             </select>  
         </div>  
-         
         <div class="row">  
             <input type="submit" value="Submit" asp-action="Index" />  
         </div>  
@@ -39,8 +38,6 @@
             <label asp-for="Result" class="col-lg-2"></label>  
             <input type="number" disabled="disabled" class="col-lg-2" asp-for="Result" />  
         </div> 
-
-
 </div>
 
- 
+ </div>
