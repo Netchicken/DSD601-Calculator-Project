@@ -13,16 +13,16 @@
 <form method="post" >  
     <div class="form-group">  
         <div class="row">  
-            <label asp-for="NumberA" class="col-lg-2"></label>  
-            <input type="number" asp-for="NumberA" class="col-lg-2" />  
+            <label asp-for="calculator.NumberA" class="col-lg-2"></label>  
+            <input type="number" asp-for="calculator.NumberA" class="col-lg-2" />  
         </div>  
         <div class="row">  
-            <label asp-for="NumberB" class="col-lg-2"></label>  
-            <input type="number" asp-for="NumberB" class="col-lg-2" />  
+            <label asp-for="calculator.NumberB" class="col-lg-2"></label>  
+            <input type="number" asp-for="calculator.NumberB" class="col-lg-2" />  
         </div>  
         <div class="row">  
-            <label asp-for="OperationType" class="col-lg-2"></label>  
-            <select asp-for="OperationType" class="col-lg-2" asp-items="Html.GetEnumSelectList<OperationType>()">  
+            <label asp-for="calculator.OperationType" class="col-lg-2"></label>  
+            <select asp-for="calculator.OperationType" class="col-lg-2" asp-items="Html.GetEnumSelectList<EnumOperationType>()">  
                
             </select>  
         </div>  
@@ -35,8 +35,8 @@
 <div class="card-footer">
 
 <div class="row">  
-            <label asp-for="Result" class="col-lg-2"></label>  
-            <input type="number" disabled="disabled" class="col-lg-2" asp-for="Result" />  
+            <label asp-for="calculator.Result" class="col-lg-2"></label>  
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="calculator.Result" />  
         </div> 
 </div>
 
