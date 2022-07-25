@@ -6,38 +6,45 @@
 }
 
 <div class="card" style=" margin-top: 20px">
-  <div class="card-header">
-<h1>Calculator </h1>
-</div>
- <div class="card-body">
-<form method="post" >  
-    <div class="form-group">  
-        <div class="row">  
-            <label asp-for="calculator.NumberA" class="col-lg-2"></label>  
-            <input type="number" asp-for="calculator.NumberA" class="col-lg-2" />  
-        </div>  
-        <div class="row">  
-            <label asp-for="calculator.NumberB" class="col-lg-2"></label>  
-            <input type="number" asp-for="calculator.NumberB" class="col-lg-2" />  
-        </div>  
-        <div class="row">  
-            <label asp-for="calculator.OperationType" class="col-lg-2"></label>  
-            <select asp-for="calculator.OperationType" class="col-lg-2" asp-items="Html.GetEnumSelectList<EnumOperationType>()">  
-               
-            </select>  
-        </div>  
-        <div class="row">  
-            <input type="submit" value="Submit" asp-action="Index" />  
-        </div>  
-    </div>  
-</form>   
-</div>
-<div class="card-footer">
+    <div class="card-header">
+        <h1>Calculator </h1>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div class="form-group">
+                <div class="row">
+                    <label asp-for="calculator.NumberA" class="col-lg-2"></label>
+                    <input type="number" asp-for="calculator.NumberA" class="col-lg-2" />
+                </div>
+                <div class="row">
+                    <label asp-for="calculator.NumberB" class="col-lg-2"></label>
+                    <input type="number" asp-for="calculator.NumberB" class="col-lg-2" />
+                </div>
+                <div class="row">
+                    <label asp-for="calculator.OperationType" class="col-lg-2"></label>
+                    <select asp-for="calculator.OperationType" class="col-lg-2" asp-items="Html.GetEnumSelectList<EnumOperationType>()">
+                    </select>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Submit" asp-action="Index" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
 
-<div class="row">  
-            <label asp-for="calculator.Result" class="col-lg-2"></label>  
-            <input type="number" disabled="disabled" class="col-lg-2" asp-for="calculator.Result" />  
-        </div> 
-</div>
+        <div class="row">
+            <label asp-for="calculator.Result" class="col-lg-2"></label>
+            <input type="number" disabled="disabled" class="col-lg-2" asp-for="calculator.Result" />
+            <hr />
+            @foreach (var item in Model.AllCalculations)
+            {
+                <ul>
+                    <li> @item.OperationType @item.NumberA with @item.NumberB = @item.Result  </li>
 
- </div>
+                </ul>
+            }
+        </div>
+    </div>
+
+</div>

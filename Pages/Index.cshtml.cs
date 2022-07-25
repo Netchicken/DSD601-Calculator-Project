@@ -11,12 +11,26 @@ namespace DSD601CalculatorASP.Pages
     {
         public Calculator calculator { get; set; }
         public Calculations calculations { get; set; }
+
+        public List<Calculator> AllCalculations = new List<Calculator>();
+
         //this runs when you submit the form
         public void OnPostAsync()
         {
             if (ModelState.IsValid)
             {
-                calculations.Calculation(calculator);
+                   calculations.Calculation(calculator);
+                
+                
+                
+                //pure method
+               // calculator = calculations.CalculationPureMethod(calculator);
+
+                //add each entry to the static list calculator
+                StaticList.AllCalculations.Add(calculator);
+
+                //pass all the data from the static list to the List instantiated here
+                AllCalculations.AddRange(StaticList.AllCalculations);
 
             }
 
