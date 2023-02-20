@@ -37,13 +37,13 @@
             <label asp-for="calculator.Result" class="col-lg-2"></label>
             <input type="number" disabled="disabled" class="col-lg-2" asp-for="calculator.Result" />
             <hr />
-            @foreach (var item in Model.AllCalculations)
+            @*@foreach (var item in Model.AllCalculations)
             {
                 <ul>
                     <li> @item.OperationType @item.NumberA with @item.NumberB = @item.Result  </li>
 
                 </ul>
-            }
+            }*@
         </div>
     </div>
 

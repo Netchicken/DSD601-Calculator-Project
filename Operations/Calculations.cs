@@ -4,8 +4,6 @@ namespace DSD601CalculatorASP.Operations
 {
     public class Calculations
     {
-     
-
         public void Calculation(Calculator calculator)
         {
             if (calculator.OperationType == EnumOperationType.Addition)
@@ -56,7 +54,7 @@ namespace DSD601CalculatorASP.Operations
 
 
             }
-            
+
             return calculator.Result;
         }
     }
