@@ -74,3 +74,13 @@ namespace DSD601CalculatorASP.Pages
 
 //[Display(Name = "Operation")]
 //public EnumOperationType OperationType { get; set; } //this is the Enum with is a handy way to make a list easily.
+
+
+
+//public enum EnumOperationType
+//{
+//    Addition,
+//    Multiplication,
+//    Division,
+//    Subtraction
+//}
