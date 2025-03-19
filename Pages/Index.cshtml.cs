@@ -32,63 +32,95 @@ namespace DSD601CalculatorASP.Pages
             if (ModelState.IsValid)
             {
 
-                if (OperationType == EnumOperationType.Addition)
-                    Result = NumberA + NumberB;
-                if (OperationType == EnumOperationType.Division)
-                    Result = NumberA / NumberB;
-                if (OperationType == EnumOperationType.Subtraction)
-                    Result = NumberA - NumberB;
-                if (OperationType == EnumOperationType.Multiplication)
-                    Result = NumberA * NumberB;
+                //if (OperationType == EnumOperationType.Addition)
+                //    Result = NumberA + NumberB;
+                //if (OperationType == EnumOperationType.Division)
+                //    Result = NumberA / NumberB;
+                //if (OperationType == EnumOperationType.Subtraction)
+                //    Result = NumberA - NumberB;
+                //if (OperationType == EnumOperationType.Multiplication)
+                //    Result = NumberA * NumberB;
 
 
+
+                //  calculations.Calculation(calculator);
+
+
+
+
+                Result = Calculator(NumberA, NumberB, OperationType);
 
 
                 //   calculations.Calculation(calculator);
             }
         }
+
+
+        public Double Calculator(Double NumA, Double NumB, EnumOperationType selectedType)
+        {
+            if (selectedType == EnumOperationType.Select)
+                return 0;
+
+            if (selectedType == EnumOperationType.Addition)
+                return NumA + NumB;
+            if (selectedType == EnumOperationType.Division)
+                return NumA / NumB;
+            if (selectedType == EnumOperationType.Subtraction)
+                return NumA - NumB;
+            if (selectedType == EnumOperationType.Multiplication)
+                return NumA * NumB;
+
+            return 0;
+
+
+        }
+
+
+
+
+        // public List<Calculator> AllCalculations = new List<Calculator>();
+
+        //pure method
+        // calculator = calculations.CalculationPureMethod(calculator);
+
+        //add each entry to the static list calculator
+        //  StaticList.AllCalculations.Add(calculator);
+
+        //pass all the data from the static list to the List instantiated here
+        //  AllCalculations.AddRange(StaticList.AllCalculations);
+
+
+
+
+
+        //  public Calculations calc = new Calculations();
+        //convert it to a method
+        //private void Calculation()
+        //{
+        //if (OperationType == EnumOperationType.Addition)
+        //    Result = NumberA + NumberB;
+        //if (OperationType == EnumOperationType.Division)
+        //    Result = NumberA / NumberB;
+        //if (OperationType == EnumOperationType.Subtraction)
+        //    Result = NumberA - NumberB;
+        //if (OperationType == EnumOperationType.Multiplication)
+        //    Result = NumberA * NumberB;
+        //}
+
+
+
+
+
+
+
+        public enum EnumOperationType
+        {
+            Select,
+            Addition,
+            Multiplication,
+            Division,
+            Subtraction
+        }
+
     }
-}
-
-// public List<Calculator> AllCalculations = new List<Calculator>();
-
-//pure method
-// calculator = calculations.CalculationPureMethod(calculator);
-
-//add each entry to the static list calculator
-//  StaticList.AllCalculations.Add(calculator);
-
-//pass all the data from the static list to the List instantiated here
-//  AllCalculations.AddRange(StaticList.AllCalculations);
-
-
-
-
-
-//  public Calculations calc = new Calculations();
-//convert it to a method
-//private void Calculation()
-//{
-//if (OperationType == EnumOperationType.Addition)
-//    Result = NumberA + NumberB;
-//if (OperationType == EnumOperationType.Division)
-//    Result = NumberA / NumberB;
-//if (OperationType == EnumOperationType.Subtraction)
-//    Result = NumberA - NumberB;
-//if (OperationType == EnumOperationType.Multiplication)
-//    Result = NumberA * NumberB;
-//}
-
-
-
-
-
-
-
-public enum EnumOperationType
-{
-    Addition,
-    Multiplication,
-    Division,
-    Subtraction
 }
